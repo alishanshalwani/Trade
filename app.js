@@ -70,17 +70,17 @@ function hit(e){
     showMessage('It took you ' + duration + ' seconds to collect products');
     if (duration > maxDuration){
         gameArea.children[0].remove();
-        results.innerHTML = `<h3 style="color:white >Can do better! <span id="loser">!</span> Your score was ${count}.<br> Click the start button to play again!</h3>`;
+        results.innerHTML = `<h3>Can do better! <span id="loser">!</span> Your score was ${count}.<br> Click the start button to play again!</h3>`;
         resetGame();
     } else {
         gameArea.children[0].remove();
         playArea.timer = setTimeout(myBox, random(4000));
         count++;
         if (count === 30){
-            results.innerHTML = `<h3 style="color:white>You reached ${renderCount(count)}! <span id="winner">You win!</span> <br> now that you've collected alot of products <br> let's help you sell them to make money .</h3>`;
+            results.innerHTML = `<h3 >You reached ${renderCount(count)}! <span id="winner">You win!</span> <br> now that you've collected alot of products <br> let's help you sell them to make money .</h3>`;
             resetGame();
         } else {
-            results.innerHTML = `<h3 style="color:white>Score: ${renderCount(count)} of 30 </h3>`;
+            results.innerHTML = `<h3 >Score: ${renderCount(count)} of 30 </h3>`;
         }
     }
 }
